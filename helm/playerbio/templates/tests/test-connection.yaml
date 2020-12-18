@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args:  ['{{ include "playerbio.fullname" . }}:{{ .Values.service.port }}']
+      args:  ['{{ include "playerbio.fullname" . }}:{{ .Values.service.port }}/ping']
   restartPolicy: Never

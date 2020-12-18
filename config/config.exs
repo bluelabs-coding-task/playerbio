@@ -27,7 +27,7 @@ use Mix.Config
 #
 #     import_config "#{Mix.env()}.exs"
 
-config :player_bio, port: 8080
+config :player_bio, port: 80
 
 config :prometheus,
   vm_system_info_collector_metrics: [

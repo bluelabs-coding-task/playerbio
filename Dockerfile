@@ -7,6 +7,6 @@ RUN apk add make
 RUN make deps compile
 
 USER playerbio
-EXPOSE 8080
+EXPOSE 80
 
 ENTRYPOINT make run
