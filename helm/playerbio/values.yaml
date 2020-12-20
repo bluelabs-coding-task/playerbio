@@ -1,7 +1,7 @@
 replicaCount: 5
 
 image:
-  repository: nginx
+  repository: "filled by pipeline"
   pullPolicy: IfNotPresent
 
 serviceAccount:
@@ -18,7 +18,7 @@ securityContext: {}
 service:
   type: NodePort
   port: 80
-  nodePort: 30400
+  nodePort: 31100
 
 ingress:
   enabled: false
