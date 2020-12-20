@@ -6,7 +6,6 @@ RUN apk add make
 
 RUN make deps compile
 
-USER playerbio
 EXPOSE 80
 
-ENTRYPOINT make run
+ENTRYPOINT ["make", "run"]
