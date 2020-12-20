@@ -7,3 +7,5 @@ erl_crash.dump
 *.ez
 player_bio-*.tar
 *~
+.idea/
+.iml
