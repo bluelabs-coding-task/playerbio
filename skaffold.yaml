@@ -1,0 +1,23 @@
+apiVersion: skaffold/v1
+kind: Config
+metadata:
+  name: "playerbio"
+build:
+  tagPolicy:
+    dateTime: {}
+  local:
+    push: true
+  artifacts:
+    - image: "localhost:30400/playerbio"
+deploy:
+  helm:
+    releases:
+      - name: "playerbio-local"
+        namespace: "development"
+        chartPath: "helm/playerbio"
+        values:
+          # This is because the Docker registry is exposed only via NodePort.
+          image.skaffoldRepository: "localhost:30400/playerbio"
+        setValues:
+          service.nodePort: "~"
+          replicaCount: "1"
