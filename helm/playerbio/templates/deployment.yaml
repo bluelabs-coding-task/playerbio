@@ -11,6 +11,8 @@ spec:
       {{- include "playerbio.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
       labels:
         {{- include "playerbio.selectorLabels" . | nindent 8 }}
     spec:
