@@ -47,6 +47,7 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 Selector labels
 */}}
 {{- define "playerbio.selectorLabels" -}}
+app: {{ include "playerbio.name" . }}
 app.kubernetes.io/name: {{ include "playerbio.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
